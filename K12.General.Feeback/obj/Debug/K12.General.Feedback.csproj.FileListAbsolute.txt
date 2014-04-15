@@ -1,0 +1,13 @@
+C:\Users\dylan\Desktop\公司\GitHub\K12.General.Feedback\K12.General.Feeback\obj\Debug\K12.General.Feedback.csprojResolveAssemblyReference.cache
+C:\Users\dylan\Desktop\公司\GitHub\K12.General.Feedback\K12.General.Feeback\obj\Debug\K12.General.Feedback.AuthBox.resources
+C:\Users\dylan\Desktop\公司\GitHub\K12.General.Feedback\K12.General.Feeback\obj\Debug\K12.General.Feedback.CommentEditor.resources
+C:\Users\dylan\Desktop\公司\GitHub\K12.General.Feedback\K12.General.Feeback\obj\Debug\K12.General.Feedback.NewsCreator.resources
+C:\Users\dylan\Desktop\公司\GitHub\K12.General.Feedback\K12.General.Feeback\obj\Debug\K12.General.Feedback.PictureViewer.resources
+C:\Users\dylan\Desktop\公司\GitHub\K12.General.Feedback\K12.General.Feeback\obj\Debug\K12.General.Feedback.UrlBrowser.resources
+C:\Users\dylan\Desktop\公司\GitHub\K12.General.Feedback\K12.General.Feeback\obj\Debug\K12.General.Feedback.VoteViewer.resources
+C:\Users\dylan\Desktop\公司\GitHub\K12.General.Feedback\K12.General.Feeback\obj\Debug\K12.General.Feedback.FeedbackForm.resources
+C:\Users\dylan\Desktop\公司\GitHub\K12.General.Feedback\K12.General.Feeback\obj\Debug\K12.General.Feedback.NewsForm.resources
+C:\Users\dylan\Desktop\公司\GitHub\K12.General.Feedback\K12.General.Feeback\obj\Debug\K12.General.Feedback.Properties.Resources.resources
+C:\Users\dylan\Desktop\公司\GitHub\K12.General.Feedback\K12.General.Feeback\obj\Debug\K12.General.Feedback.TextBoxForm.resources
+C:\Users\dylan\Desktop\公司\GitHub\K12.General.Feedback\K12.General.Feeback\obj\Debug\K12.General.Feedback.VoteForm.resources
+C:\Users\dylan\Desktop\公司\GitHub\K12.General.Feedback\K12.General.Feeback\obj\Debug\K12.General.Feedback.csproj.GenerateResource.Cache
