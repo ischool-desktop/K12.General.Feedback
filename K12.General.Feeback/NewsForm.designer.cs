@@ -50,9 +50,9 @@
             this.dgNewsList.AllowUserToAddRows = false;
             this.dgNewsList.AllowUserToDeleteRows = false;
             this.dgNewsList.AllowUserToResizeRows = false;
-            this.dgNewsList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgNewsList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgNewsList.BackgroundColor = System.Drawing.Color.White;
             this.dgNewsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgNewsList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -77,8 +77,8 @@
             this.dgNewsList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgNewsList.Size = new System.Drawing.Size(785, 400);
             this.dgNewsList.TabIndex = 0;
-            this.dgNewsList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgNewsList_CellDoubleClick);
             this.dgNewsList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewX1_CellContentClick);
+            this.dgNewsList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgNewsList_CellDoubleClick);
             // 
             // colID
             // 
@@ -161,7 +161,7 @@
             this.btnAddNews.Location = new System.Drawing.Point(686, 413);
             this.btnAddNews.Name = "btnAddNews";
             this.btnAddNews.Size = new System.Drawing.Size(100, 25);
-            this.btnAddNews.TabIndex = 1;
+            this.btnAddNews.TabIndex = 2;
             this.btnAddNews.Text = "新增";
             this.btnAddNews.Visible = false;
             this.btnAddNews.Click += new System.EventHandler(this.btnAddNews_Click);
@@ -170,10 +170,15 @@
             // 
             this.lbHelp1.AutoSize = true;
             this.lbHelp1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.lbHelp1.BackgroundStyle.Class = "";
+            this.lbHelp1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lbHelp1.Location = new System.Drawing.Point(4, 418);
             this.lbHelp1.Name = "lbHelp1";
             this.lbHelp1.Size = new System.Drawing.Size(318, 21);
-            this.lbHelp1.TabIndex = 2;
+            this.lbHelp1.TabIndex = 1;
             this.lbHelp1.Text = "說明：於訊息欄位連點滑鼠左鍵,可開啟詳細說明視窗";
             // 
             // NewsForm
@@ -184,6 +189,7 @@
             this.Controls.Add(this.lbHelp1);
             this.Controls.Add(this.dgNewsList);
             this.Controls.Add(this.btnAddNews);
+            this.DoubleBuffered = true;
             this.MaximizeBox = true;
             this.MinimizeBox = true;
             this.MinimumSize = new System.Drawing.Size(800, 400);

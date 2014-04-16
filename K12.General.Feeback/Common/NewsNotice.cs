@@ -6,6 +6,7 @@ using K12.General.Feedback.Feature;
 using System.Xml;
 using FISCA.DSAUtil;
 using FISCA.Presentation.Controls;
+using System.Windows.Forms;
 
 namespace K12.General.Feedback
 {
@@ -25,17 +26,26 @@ namespace K12.General.Feedback
 
         private void _newsLoader_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            foreach (DSXmlHelper each in e.Result as List<DSXmlHelper>)
+            List<DSXmlHelper> HelperList = e.Result as List<DSXmlHelper>;
+            if (HelperList.Count > 0)
             {
-                DateTime time = DateTime.Parse(each.GetText("PostTime"));
-
-                //MsgBox.Show(each.GetText("Message"), string.Format("張貼時間：{0} {1}", time.ToShortDateString(), time.ToShortTimeString()));
-
-                StringBuilder msg = new StringBuilder("");
-                msg.AppendLine(each.GetText("Message"));
-                msg.AppendLine("");
-                msg.AppendLine(string.Format("張貼時間：{0} {1}", time.ToShortDateString(), time.ToShortTimeString()));
-                MsgBox.Show(msg.ToString(), "最新消息通知");
+                Dictionary<string, name> MessageDic = new Dictionary<string, name>();
+                foreach (DSXmlHelper each in HelperList)
+                {
+                    DateTime time = DateTime.Parse(each.GetText("PostTime"));
+                    string _time = string.Format("{0}  {1}", time.ToShortDateString(), time.ToShortTimeString());
+                    if (!MessageDic.ContainsKey(_time))
+                    {
+                        name n = new name();
+                        n._key = _time;
+                        n._value = each.GetText("Message");
+                        n._link = each.GetText("Url");
+                        MessageDic.Add(_time, n);
+                    }
+                }
+                IsViewForm view = new IsViewForm(MessageDic);
+               // view.TopMost = true;
+                view.ShowDialog();
             }
 
             SavePreference();

@@ -11,7 +11,7 @@ namespace K12.General.Feedback
 {
     public partial class AuthBox : BaseForm
     {
-        private const string password = "%#$$^%&"; //shift + 5344657
+        private const string password = "%#$!%^("; //shift + 5341569
 
         public AuthBox()
         {

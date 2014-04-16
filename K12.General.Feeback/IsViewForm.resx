@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,19 +117,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="colID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="colUser.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="colMsg.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="colUrl.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="colPostTime.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAECAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAISEhFyklKTclJSsvJCQkDiQkJBwmISYuISEhFwAAAAIAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAISEhFy8uo/J0csb/VVPH/yAeXH89PMr/d3bY/ysptvslISU2PwA/BAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAhMQW2o1NLT/FxbC/wQEzf8DA9X/ODjg/xoa2f8FBc3/BAK+/x4e
+        IzMAAAABAAAAAAAAAAAAAAAAAAAAABkZGQoEApz/BAO//wQE1P8EBOD/AwPm/wQE5/8EBOb/BATg/wMD
+        1f8DAsD/HBwlGwAAAAAAAAAAAAAAAAAAAAAgICAfBAKz/wMD0P8DA+H/AwPq/wMD7f8DA+7/AwPt/wMD
+        6v8DA+H/AwPR/w0LipkqKioGAAAAAAAAAAAAAAAAGBhESgQCwP8EBNr/BATo/wQE7v8EBPD/AwPx/wMD
+        8P8DA+7/AwPo/wMD2v8DAsH/HR0kIwAAAAAAAAAAAAAAAwUDl90EBMb/BATe/wQE6v8EBPD/BATx/wQE
+        8f8DA/H/AwPw/wMC6/8MK+L/CyjP/wsKf5YAAAADAAAAAB8fHwgUEqL/BATF/wQE3f8EBOr/BATv/wQE
+        8f8EBPH/AwPx/zy68v9d4Pz/Y+f+/2Hl/f8IFKX/HBwcCQAAAAAqFSoMSkiy/xIQwf8EBNj/BATm/wQE
+        7f8EBPD/BATw/xVP7v9h5f3/Y+f+/2Pn/v9j5/7/Ejmy/xkZGQoAAAAAMzMzBTY0qf9VVMn/BATM/wQE
+        3v8EBOf/BhfD/wYVyf9W1/r/Y+f+/2Pn/v9j5/7/XuH8/wMAk/8AAAADAAAAAAAAAAAGBIqpU1G3/xMR
+        vP8EA87/BALe/0SeO/8blSH/Nq3w/2Lm/v9j5/7/Wdv6/w8wrv8UFFIlAAAAAAAAAAA/AD8EKCgtMxJz
+        Ov8otjb/NbAf/zKxI/8TlCD/EbVK/wMDzf8FD8f/BQi1/wQBl/8SEl4bAAAAAAAAAAAAAAABKB4oMkG7
+        WP8zzWH/I89k/yLLW/83rhn/F4sh/wQFrP8EAqjkBgSWczMzAAUAAAAAAAAAAAAAAAAAAAAAAAAAAA9U
+        FyG+6ML/rOWx/5Potf9+5aj/atyU/xciIhYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAPwA/BD+/ernt+/X/peTD/Q8/HxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA8A8CAOAHAODAA8BCwAP/AMABwELAAQAAgACAP4AAgD+AAIA/gAAAAMABAACAAwAAAA8AAID/
+        ///B//////8AAA==
+</value>
+  </data>
 </root>

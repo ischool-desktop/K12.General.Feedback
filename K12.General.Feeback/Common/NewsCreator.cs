@@ -21,7 +21,8 @@ namespace K12.General.Feedback
             InitializeComponent();
         }
 
-        public NewsCreator(DSXmlHelper helper) : this()
+        public NewsCreator(DSXmlHelper helper)
+            : this()
         {
             _news_id = helper.GetText("@ID");
             //目的是讓Text分行分段 by dylan
@@ -39,7 +40,8 @@ namespace K12.General.Feedback
             btnDelete.Enabled = true;
         }
 
-        public NewsCreator(List<string> user_list) : this()
+        public NewsCreator(List<string> user_list)
+            : this()
         {
             foreach (string user in user_list)
             {
@@ -77,8 +79,15 @@ namespace K12.General.Feedback
                 CurrentUser.ReportError(ex);
                 MessageBox.Show(ex.Message);
             }
+
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("對象:" + txtUsers.Text);
+            sb.AppendLine("內容:" + txtMessage.Text);
+            sb.AppendLine("URL:" + txtUrl.Text);
+            FISCA.LogAgent.ApplicationLog.Log("[特殊歷程]", "發佈最新消息", sb.ToString());
+
+            MsgBox.Show("發送完成!!");
             this.DialogResult = DialogResult.OK;
-            this.Close();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -112,6 +121,14 @@ namespace K12.General.Feedback
                 CurrentUser.ReportError(ex);
                 MessageBox.Show(ex.Message);
             }
+
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("對象:" + txtUsers.Text);
+            sb.AppendLine("內容:" + txtMessage.Text);
+            sb.AppendLine("URL:" + txtUrl.Text);
+            FISCA.LogAgent.ApplicationLog.Log("[特殊歷程]", "發佈最新消息", sb.ToString());
+
+            MsgBox.Show("更新完成!!");
             this.DialogResult = DialogResult.OK;
         }
 
@@ -126,6 +143,12 @@ namespace K12.General.Feedback
                 CurrentUser.ReportError(ex);
                 MessageBox.Show(ex.Message);
             }
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("對象:" + txtUsers.Text);
+            sb.AppendLine("內容:" + txtMessage.Text);
+            sb.AppendLine("URL:" + txtUrl.Text);
+            FISCA.LogAgent.ApplicationLog.Log("[特殊歷程]", "刪除最新消息", sb.ToString());
+            MsgBox.Show("刪除完成!!");
             this.DialogResult = DialogResult.OK;
         }
     }

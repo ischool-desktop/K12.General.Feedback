@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>K12.General.Feedback</RootNamespace>
     <AssemblyName>K12.General.Feedback</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
@@ -37,6 +37,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -89,6 +90,11 @@
     </Reference>
     <Reference Include="FISCA.DSAUtil">
       <HintPath>..\..\..\ischool_Senior with FISCA\LibraryProject\FISCA.DSAUtil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.LogAgent, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.LogAgent.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FISCA.Permission">
@@ -162,6 +168,18 @@
     <Compile Include="FeedbackForm.designer.cs">
       <DependentUpon>FeedbackForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IsViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IsViewForm.Designer.cs">
+      <DependentUpon>IsViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IsViewForm_Open.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IsViewForm_Open.Designer.cs">
+      <DependentUpon>IsViewForm_Open.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mode.cs" />
     <Compile Include="NewsForm.cs">
       <SubType>Form</SubType>
@@ -200,6 +218,12 @@
     <EmbeddedResource Include="FeedbackForm.resx">
       <DependentUpon>FeedbackForm.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsViewForm.resx">
+      <DependentUpon>IsViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsViewForm_Open.resx">
+      <DependentUpon>IsViewForm_Open.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewsForm.resx">
       <DependentUpon>NewsForm.cs</DependentUpon>
@@ -287,6 +311,9 @@
     <Content Include="Library\FISCA.DSAUtil.dll" />
     <Content Include="Library\FISCA.DSAUtil.pdb" />
     <Content Include="Library\FISCA.DSAUtil.xml" />
+    <Content Include="Library\FISCA.LogAgent.dll" />
+    <Content Include="Library\FISCA.LogAgent.pdb" />
+    <Content Include="Library\FISCA.LogAgent.xml" />
     <Content Include="Library\FISCA.pdb" />
     <Content Include="Library\FISCA.Permission.dll" />
     <Content Include="Library\FISCA.Permission.pdb" />
@@ -297,6 +324,7 @@
     <Content Include="Library\K12.Data.dll" />
     <Content Include="Library\K12.Data.pdb" />
     <Content Include="Library\K12.Data.xml" />
+    <None Include="Resources\photoshop_64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
