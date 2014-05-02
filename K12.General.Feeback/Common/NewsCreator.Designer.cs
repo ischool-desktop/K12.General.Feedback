@@ -38,8 +38,9 @@
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.btnUpdate = new DevComponents.DotNetBar.ButtonX();
             this.btnDelete = new DevComponents.DotNetBar.ButtonX();
-            this.errorProvider1 = new K12.General.Feedback.EnhancedErrorProvider();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.errorProvider1 = new K12.General.Feedback.EnhancedErrorProvider();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             this.btnAnnounce.Location = new System.Drawing.Point(577, 581);
             this.btnAnnounce.Name = "btnAnnounce";
             this.btnAnnounce.Size = new System.Drawing.Size(80, 25);
-            this.btnAnnounce.TabIndex = 6;
+            this.btnAnnounce.TabIndex = 8;
             this.btnAnnounce.Text = "發佈";
             this.btnAnnounce.Click += new System.EventHandler(this.btnAnnounce_Click);
             // 
@@ -70,7 +71,7 @@
             this.txtUsers.Name = "txtUsers";
             this.txtUsers.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtUsers.Size = new System.Drawing.Size(820, 101);
-            this.txtUsers.TabIndex = 1;
+            this.txtUsers.TabIndex = 3;
             // 
             // txtMessage
             // 
@@ -87,7 +88,7 @@
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtMessage.Size = new System.Drawing.Size(820, 276);
-            this.txtMessage.TabIndex = 3;
+            this.txtMessage.TabIndex = 5;
             // 
             // txtUrl
             // 
@@ -103,7 +104,7 @@
             this.txtUrl.Name = "txtUrl";
             this.txtUrl.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtUrl.Size = new System.Drawing.Size(820, 37);
-            this.txtUrl.TabIndex = 5;
+            this.txtUrl.TabIndex = 7;
             // 
             // labelX1
             // 
@@ -134,7 +135,7 @@
             this.labelX2.Location = new System.Drawing.Point(9, 196);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(60, 21);
-            this.labelX2.TabIndex = 2;
+            this.labelX2.TabIndex = 4;
             this.labelX2.Text = "訊息內容";
             // 
             // labelX3
@@ -151,7 +152,7 @@
             this.labelX3.Location = new System.Drawing.Point(9, 507);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(99, 21);
-            this.labelX3.TabIndex = 4;
+            this.labelX3.TabIndex = 6;
             this.labelX3.Text = "詳細說明 (網址)";
             // 
             // btnUpdate
@@ -164,7 +165,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(663, 581);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(80, 25);
-            this.btnUpdate.TabIndex = 7;
+            this.btnUpdate.TabIndex = 9;
             this.btnUpdate.Text = "更新";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -178,14 +179,9 @@
             this.btnDelete.Location = new System.Drawing.Point(749, 581);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(80, 25);
-            this.btnDelete.TabIndex = 8;
+            this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "刪除";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.errorProvider1.ContainerControl = this;
             // 
             // labelX4
             // 
@@ -196,18 +192,36 @@
             // 
             this.labelX4.BackgroundStyle.Class = "";
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Location = new System.Drawing.Point(458, 9);
+            this.labelX4.Location = new System.Drawing.Point(382, 9);
             this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(369, 73);
-            this.labelX4.TabIndex = 9;
+            this.labelX4.Size = new System.Drawing.Size(442, 73);
+            this.labelX4.TabIndex = 2;
             this.labelX4.Text = "發送規則說明:\r\n*/* 所有學校/所有使用者\r\ndev.jh_kh/* 內部測試/所有使用者\r\ndev.jh_kh/*,demo.ischool.j/* 內部測" +
-    "試,外部展示/所有使用者";
+    "試/所有使用者,外部展示/所有使用者";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Location = new System.Drawing.Point(136, 64);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(107, 17);
+            this.linkLabel1.TabIndex = 1;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "(發送給測試環境)";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider1.ContainerControl = this;
             // 
             // NewsCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(838, 614);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.labelX4);
             this.Controls.Add(this.labelX3);
             this.Controls.Add(this.labelX2);
@@ -246,5 +260,6 @@
         private DevComponents.DotNetBar.ButtonX btnUpdate;
         private DevComponents.DotNetBar.ButtonX btnDelete;
         private DevComponents.DotNetBar.LabelX labelX4;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

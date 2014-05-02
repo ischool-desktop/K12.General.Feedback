@@ -151,5 +151,10 @@ namespace K12.General.Feedback
             MsgBox.Show("刪除完成!!");
             this.DialogResult = DialogResult.OK;
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            txtUsers.Text = "dev.sh_d/*,dev.sh_n/*,dev.jh_kh/*,dev.jh_hs/*,demo.ischool.h/*,demo.ischool.j/*,test.kh.edu.tw/*,test.hc.edu.tw/*";
+        }
     }
 }

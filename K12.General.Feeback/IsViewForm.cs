@@ -72,6 +72,25 @@ namespace K12.General.Feedback
                 }
             }
         }
+
+        private void 開啟最新消息內容ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewX1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dataGridViewX1.CurrentRow;
+                if (row.Tag != null)
+                {
+                    name n = (name)row.Tag;
+                    IsViewForm_Open open = new IsViewForm_Open(n);
+                    //open.TopMost = true;
+                    open.ShowDialog();
+                }
+            }
+
+
+
+
+        }
     }
 
     public class name

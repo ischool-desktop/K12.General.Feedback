@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IsViewForm));
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
@@ -35,9 +36,12 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.開啟最新消息內容ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +68,7 @@
             this.Column1,
             this.Column2,
             this.Column3});
+            this.dataGridViewX1.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -74,6 +79,7 @@
             this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewX1.Location = new System.Drawing.Point(12, 91);
+            this.dataGridViewX1.MultiSelect = false;
             this.dataGridViewX1.Name = "dataGridViewX1";
             this.dataGridViewX1.RowHeadersVisible = false;
             this.dataGridViewX1.RowTemplate.Height = 24;
@@ -104,6 +110,20 @@
             this.Column3.ReadOnly = true;
             this.Column3.Width = 500;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.開啟最新消息內容ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(171, 26);
+            // 
+            // 開啟最新消息內容ToolStripMenuItem
+            // 
+            this.開啟最新消息內容ToolStripMenuItem.Name = "開啟最新消息內容ToolStripMenuItem";
+            this.開啟最新消息內容ToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.開啟最新消息內容ToolStripMenuItem.Text = "開啟最新消息內容";
+            this.開啟最新消息內容ToolStripMenuItem.Click += new System.EventHandler(this.開啟最新消息內容ToolStripMenuItem_Click);
+            // 
             // labelX1
             // 
             this.labelX1.AutoSize = true;
@@ -117,7 +137,8 @@
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(324, 73);
             this.labelX1.TabIndex = 1;
-            this.labelX1.Text = "說明:\r\n*.滑鼠[左鍵]雙擊每一行,可展開詳細內容\r\n*.附帶連結的內容,將開啟網頁連結至說明頁面\r\n*.本訊息僅呈現乙次,欲再查閱請開啟[系統->最新消息]";
+            this.labelX1.Text = "說明:\r\n*.滑鼠[左鍵]雙擊每一行,或滑鼠右鍵 可展開詳細內容\r\n*.附帶連結的內容,將開啟網頁連結至說明頁面\r\n*.本訊息僅呈現乙次,欲再查閱請開啟[系統->" +
+    "最新消息]";
             // 
             // pictureBox1
             // 
@@ -145,6 +166,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "您已取得官方發佈之[最新消息]";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -160,6 +182,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewLinkColumn Column3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 開啟最新消息內容ToolStripMenuItem;
 
     }
 }
