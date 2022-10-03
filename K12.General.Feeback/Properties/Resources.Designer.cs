@@ -63,6 +63,16 @@ namespace K12.General.Feedback.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
+        internal static System.Drawing.Bitmap close {
+            get {
+                object obj = ResourceManager.GetObject("close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
         internal static System.Drawing.Bitmap mail_ok_64 {
             get {
                 object obj = ResourceManager.GetObject("mail_ok_64", resourceCulture);
@@ -86,6 +96,16 @@ namespace K12.General.Feedback.Properties {
         internal static System.Drawing.Bitmap speech_balloon_64 {
             get {
                 object obj = ResourceManager.GetObject("speech_balloon_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 廣告5 {
+            get {
+                object obj = ResourceManager.GetObject("廣告5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

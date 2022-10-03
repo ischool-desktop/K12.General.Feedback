@@ -7,6 +7,8 @@ using System.Xml;
 using FISCA.DSAUtil;
 using FISCA.Presentation.Controls;
 using System.Windows.Forms;
+using System.Drawing;
+using Campus.Message;
 
 namespace K12.General.Feedback
 {
@@ -15,6 +17,12 @@ namespace K12.General.Feedback
         private BackgroundWorker _newsLoader;
         private DateTime _serverTime = DateTime.MinValue;
         private DateTime _lastViewTime = DateTime.MinValue;
+
+        //Dictionary<string, name> MessageDic { get; set; }
+
+        AlertCustom m_AlertOnLoad { get; set; }
+
+        TaskbarNotifier taskbarNotifier3 { get; set; }
 
         public NewsNotice()
         {
@@ -29,23 +37,58 @@ namespace K12.General.Feedback
             List<DSXmlHelper> HelperList = e.Result as List<DSXmlHelper>;
             if (HelperList.Count > 0)
             {
-                Dictionary<string, name> MessageDic = new Dictionary<string, name>();
+
                 foreach (DSXmlHelper each in HelperList)
                 {
                     DateTime time = DateTime.Parse(each.GetText("PostTime"));
-                    string _time = string.Format("{0}  {1}", time.ToShortDateString(), time.ToShortTimeString());
-                    if (!MessageDic.ContainsKey(_time))
+
+                    name n = new name();
+                    n._Time = time.ToString();
+                    n._key = time.ToString();
+                    n._value = each.GetText("Message");
+                    n._link = each.GetText("Url");
+
+                    CustomRecord cr = new CustomRecord();
+                    cr.Title = "<b>最新消息</b>";
+                    if (n._value.Contains("(*)"))
                     {
-                        name n = new name();
-                        n._key = _time;
-                        n._value = each.GetText("Message");
-                        n._link = each.GetText("Url");
-                        MessageDic.Add(_time, n);
+                        cr.Type = CrType.Type.Star;
                     }
+                    else if (n._value.Contains("(!)"))
+                    {
+                        cr.Type = CrType.Type.Warning_Blue;
+                    }
+                    else if (n._value.Contains("(!!)"))
+                    {
+                        cr.Type = CrType.Type.Warning_Red;
+                    }
+                    else if (n._value.Contains("(#)"))
+                    {
+                        cr.Type = CrType.Type.Error;
+                    }
+                    else
+                    {
+                        cr.Type = CrType.Type.News;
+                    }
+                    cr.Content = time + "\n" + n._value;
+
+                    IsViewForm_Open open = new IsViewForm_Open(n);
+                    cr.OtherMore = open;
+
+                    Campus.Message.MessageRobot.AddMessage(cr);
+
                 }
-                IsViewForm view = new IsViewForm(MessageDic);
-               // view.TopMost = true;
-                view.ShowDialog();
+
+                //第一改版內容
+                //taskbarNotifier3 = new TaskbarNotifier();
+                //taskbarNotifier3.SetBackgroundBitmap(Properties.Resources.廣告5, Color.FromArgb(255, 0, 255));
+                //taskbarNotifier3.SetCloseBitmap(Properties.Resources.close, Color.FromArgb(255, 0, 255), new Point(440, 10));
+                //taskbarNotifier3.TitleRectangle = new Rectangle(20, 235, 300, 180);
+                //taskbarNotifier3.ContentRectangle = new Rectangle(110, 170, 350, 300);
+                //taskbarNotifier3.TitleClick += taskbarNotifier3_TitleClick;
+                //taskbarNotifier3.ContentClick += taskbarNotifier3_ContentClick;
+                //taskbarNotifier3.CloseClick += taskbarNotifier3_CloseClick;
+                //taskbarNotifier3.Show("", string.Format("(共{0}筆)立即前往>>", MessageDic.Keys.Count.ToString()), 400, 120000, 1000);
             }
 
             SavePreference();

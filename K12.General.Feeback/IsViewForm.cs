@@ -86,10 +86,6 @@ namespace K12.General.Feedback
                     open.ShowDialog();
                 }
             }
-
-
-
-
         }
     }
 
@@ -98,5 +94,7 @@ namespace K12.General.Feedback
         public string _key { get; set; }
         public string _value { get; set; }
         public string _link { get; set; }
+
+        public string _Time { get; set; }
     }
 }

@@ -43,7 +43,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\..\Documents and Settings\Dylan.Huang\桌面\系統\%28FISCA%29iSchool國中系統AE\modules\JHCore_Beta\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -70,6 +70,11 @@
     </Reference>
     <Reference Include="Campus.Configuration">
       <HintPath>..\..\..\..\..\Documents and Settings\Dylan.Huang\桌面\系統\FiscaAE高中開發\modules\Campus\Campus.Configuration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Campus.Message, Version=1.0.0.8, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Campus.Message.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevComponents.DotNetBar2, Version=9.5.0.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
@@ -181,6 +186,9 @@
       <DependentUpon>IsViewForm_Open.cs</DependentUpon>
     </Compile>
     <Compile Include="Mode.cs" />
+    <Compile Include="_NewBar\TaskbarNotifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NewsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,7 +276,6 @@
     <Compile Include="VoteForm.designer.cs">
       <DependentUpon>VoteForm.cs</DependentUpon>
     </Compile>
-    <None Include="Resources\Thumbs.db" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mail_ok_64.png" />
@@ -299,6 +306,9 @@
     <Content Include="Library\Campus.Configuration.dll" />
     <Content Include="Library\Campus.Configuration.pdb" />
     <Content Include="Library\Campus.dll" />
+    <Content Include="Library\Campus.Message.dll" />
+    <Content Include="Library\Campus.Message.pdb" />
+    <Content Include="Library\Campus.Message.xml" />
     <Content Include="Library\Campus.pdb" />
     <Content Include="Library\DevComponents.DotNetBar2.dll" />
     <Content Include="Library\FISCA.Authentication.dll" />
@@ -324,6 +334,8 @@
     <Content Include="Library\K12.Data.dll" />
     <Content Include="Library\K12.Data.pdb" />
     <Content Include="Library\K12.Data.xml" />
+    <None Include="Resources\廣告5.png" />
+    <None Include="Resources\close.bmp" />
     <None Include="Resources\photoshop_64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
